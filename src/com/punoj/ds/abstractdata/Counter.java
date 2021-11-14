@@ -1,4 +1,4 @@
-package com.company;
+package com.punoj.ds.abstractdata;
 
 /**
  * abstract Data type:hidden implementation and container for datatype
