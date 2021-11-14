@@ -14,14 +14,24 @@ public class Stack {
     }
 
     public void push(double input) {
-        top++;
-        container[top] = input;
+        if (!isFull()) {
+            top++;
+            container[top] = input;
+        } else {
+
+            System.out.println("Stack is Full");
+        }
     }
 
     public double pop() {
-        int old_top = top;
-        top--;
-        return container[old_top];
+        if (!isEmpty()) {
+            int old_top = top;
+            top--;
+            return container[old_top];
+        } else {
+            System.out.println("Stack is already empty !!");
+            return -1;
+        }
     }
 
     public double peek() {
